@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "Key",
+  "namespace": "mysql.trafficvance.campaign",
+  "fields": [
+    {
+      "name": "campaign_id",
+      "type": "long"
+    }
+  ],
+  "connect.name": "mysql.trafficvance.campaign.Key"
+}
