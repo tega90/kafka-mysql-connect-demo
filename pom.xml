@@ -17,6 +17,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<avro.version>1.8.2</avro.version>
+		<confluent.version>3.3.1</confluent.version>
 	</properties>
 
 	<dependencies>
@@ -36,27 +37,27 @@
 		<dependency>
 			<groupId>io.confluent</groupId>
 			<artifactId>kafka-avro-serializer</artifactId>
-			<version>3.3.1</version>
+			<version>${confluent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.confluent</groupId>
 			<artifactId>common-config</artifactId>
-			<version>3.3.1</version>
+			<version>${confluent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.confluent</groupId>
 			<artifactId>kafka-schema-registry-client</artifactId>
-			<version>3.3.1</version>
+			<version>${confluent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.confluent</groupId>
 			<artifactId>common</artifactId>
-			<version>3.3.1</version>
+			<version>${confluent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.confluent</groupId>
 			<artifactId>common-utils</artifactId>
-			<version>3.3.1</version>
+			<version>${confluent.version}</version>
 		</dependency>
 
 		<dependency>
@@ -101,5 +102,13 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!--necessary to resolve confluent dependencies-->
+	<repositories>
+		<repository>
+			<id>confluent</id>
+			<url>http://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
 
 </project>
